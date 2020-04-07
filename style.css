@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #132235;
+}
+
+.logo-container img {
+  width: 348px;
+  height: 145px;
+}
