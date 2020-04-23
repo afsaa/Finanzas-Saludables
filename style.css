@@ -87,3 +87,31 @@ header {
   border-radius: 15px;
   grid-column: 8 / 12;
 }
+
+@media (max-width: 600px) {
+  body,
+  .hero,
+  .hero-text,
+  .hero-title,
+  .hero-subtitle,
+  .hero-cta {
+    display: block;
+    margin: 1rem;
+  }
+
+  .logo-container > img,
+  .hero-cta {
+    width: auto;
+  }
+
+  .hero-image > img {
+    width: 100%;
+    height: auto;
+    margin: 2rem;
+  }
+
+  body {
+    width: 100%;
+    height: auto;
+  }
+}
