@@ -4,8 +4,8 @@
 
 #hero {
   @include widthAndHeight(100%, 400px);
-  background: linear-gradient($primary-color, $secondary-color);
-  background-image: url("../images/hero-image.png");
+  background-image: url("../images/hero-image.png"),
+    linear-gradient(rgb(110, 182, 216), rgb(19, 34, 53));
   background-position: center right;
   background-size: contain;
   background-repeat: no-repeat;
