@@ -1,7 +1,5 @@
 import React from "react";
 import { Hero } from "../Components/Hero";
-import { Header } from "../Components/Header";
-import { Footer } from "../Components/Footer";
 import { Carousel } from "../Components/Carousel";
 
 const homepagePosts: any = [
@@ -43,9 +41,9 @@ const homepagePosts: any = [
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Hero />
       <Carousel posts={homepagePosts} />
-    </div>
+    </>
   );
 }

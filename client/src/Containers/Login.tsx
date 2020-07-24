@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/styles/Login.scss";
 
 import googleIcon from "../assets/images/google-icon.png";
@@ -25,7 +26,7 @@ export const Login = () => {
               />
               Recuérdame
             </label>
-            <a href="#">Olvidé mi contraseña</a>
+            <Link to="/">Olvidé mi contraseña</Link>
           </div>
         </form>
         <section className="login__container--social-media">
@@ -40,7 +41,7 @@ export const Login = () => {
         </section>
         <p className="login__container--register">
           Todavía no tienes una cuenta?
-          <a href="#">Registrate!</a>
+          <Link to="/register">Registrate!</Link>
         </p>
       </div>
     </section>

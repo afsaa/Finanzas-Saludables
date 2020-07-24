@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/styles/Header.scss";
 
 import Logo from "../assets/images/logo.png";
@@ -14,8 +15,8 @@ export const Header = () => {
           <p>Username</p>
         </div>
         <ul>
-          <a href="#">Perfil</a>
-          <a href="#">Cerrar Sesión</a>
+          <Link to="/">Perfil</Link>
+          <Link to="/login">Cerrar Sesión</Link>
         </ul>
       </div>
     </header>
