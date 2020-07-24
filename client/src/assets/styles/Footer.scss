@@ -1,0 +1,35 @@
+@import "./common/fonts";
+@import "./common/variables";
+@import "./common/mixins";
+
+.footer {
+  @include footer($primary-color);
+  &__custom {
+    @include footer($secondary-color);
+  }
+}
+.footer a {
+  @include footerLink($main-text-color);
+}
+.footer__custom a {
+  @include footerLink($primary-color);
+}
+.footer a:hover,
+.footer__custom a:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 600px) {
+  .footer {
+    @include flex(flex-start, initial, column);
+  }
+  .footer__custom {
+    @include flex(flex-start, initial, column);
+    background-color: $secondary-color;
+  }
+  .footer a {
+    margin: 5px;
+  }
+  .footer__custom a {
+    margin: 5px;
+  }
+}
