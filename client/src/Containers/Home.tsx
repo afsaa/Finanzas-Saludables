@@ -44,10 +44,8 @@ const homepagePosts: any = [
 export default function Home() {
   return (
     <div>
-      <Header />
       <Hero />
       <Carousel posts={homepagePosts} />
-      <Footer />
     </div>
   );
 }
