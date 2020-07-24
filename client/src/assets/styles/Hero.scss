@@ -2,7 +2,7 @@
 @import "./common/variables";
 @import "./common/mixins";
 
-#hero {
+.hero {
   @include widthAndHeight(100%, 400px);
   background-image: url("../images/hero-image.png"),
     linear-gradient(rgb(110, 182, 216), rgb(19, 34, 53));
@@ -12,7 +12,7 @@
   @include flex(center, left, initial);
 }
 
-.hero-container {
+.hero__container {
   width: 40%;
   margin-left: 10%;
 }

@@ -8,10 +8,10 @@ export const Hero = () => {
     "Ahorra esas horas para usarlas en lo que más te gusta.";
 
   return (
-    <div id="hero">
-      <div className="hero-container">
-        <h2 className="hero-title">{hero_title_text}</h2>
-        <p className="hero-description">{hero_description_text}</p>
+    <div className="hero">
+      <div className="hero__container">
+        <h2 className="hero__title">{hero_title_text}</h2>
+        <p className="hero__description">{hero_description_text}</p>
       </div>
     </div>
   );
