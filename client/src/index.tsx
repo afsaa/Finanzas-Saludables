@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./Containers/App";
 import { Provider } from "react-redux";
 import reducer from "./reducers";
-import { createStore } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
 import * as serviceWorker from "./serviceWorker";
 
 const initialState = {
@@ -46,7 +46,10 @@ const initialState = {
   ],
 };
 
-const store = createStore(reducer, initialState);
+const store = configureStore({
+  reducer: reducer,
+  preloadedState: initialState,
+});
 
 ReactDOM.render(
   <Provider store={store}>

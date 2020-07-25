@@ -6,6 +6,7 @@ import PageNotFound from "./PageNotFound";
 import { Login } from "../Containers/Login";
 import { Register } from "../Containers/Register";
 import "../assets/styles/App.scss";
+import AddPost from "./AddPost";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/add-post">
+              <AddPost />
             </Route>
             <Route path="*">
               <PageNotFound />
