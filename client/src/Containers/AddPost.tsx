@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { addPost } from "../actions/index";
+import { addPost } from "../actions";
 
 function AddPost(props: any) {
+  type PostCard = {
+    title: string;
+    subtitle: string;
+    imgSrc: string;
+    imgAlt: string;
+  };
+
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [imgSrc, setImgSrc] = useState("");
@@ -10,7 +17,8 @@ function AddPost(props: any) {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    props.addPost(title, subtitle, imgSrc, imgAlt);
+    const post: PostCard = { title, subtitle, imgSrc, imgAlt };
+    props.addPost(post);
     setTitle("");
     setSubtitle("");
     setImgSrc("");
@@ -55,4 +63,8 @@ function AddPost(props: any) {
   );
 }
 
-export default connect(null, { addPost })(AddPost);
+const mapDispatchToProps = {
+  addPost,
+};
+
+export default connect(null, mapDispatchToProps)(AddPost);
