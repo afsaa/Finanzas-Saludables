@@ -1,4 +1,4 @@
-import { ADD_POST } from "../actions/actionTypes";
+import { ADD_POST, LOGIN_REQUEST } from "../actions/actionTypes";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -6,6 +6,19 @@ const reducer = (state, action) => {
       return {
         ...state,
         posts: [...state.posts, action.payload],
+      };
+    }
+
+    case LOGIN_REQUEST: {
+      return {
+        ...state,
+        loggedInUser: {
+          ...state.users.filter(
+            (user) =>
+              user.email === action.payload.email &&
+              user.password === action.payload.password
+          ),
+        },
       };
     }
 

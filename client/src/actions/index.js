@@ -1,4 +1,4 @@
-import { ADD_POST } from "./actionTypes";
+import { ADD_POST, LOGIN_REQUEST } from "./actionTypes";
 
 let nextPostId = 4;
 
@@ -11,4 +11,9 @@ export const addPost = ({ title, subtitle, imgSrc, imgAlt }) => ({
     imgSrc: imgSrc,
     imgAlt: imgAlt,
   },
+});
+
+export const loginRequest = (payload) => ({
+  type: LOGIN_REQUEST,
+  payload,
 });

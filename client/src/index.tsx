@@ -7,7 +7,8 @@ import { configureStore } from "@reduxjs/toolkit";
 import * as serviceWorker from "./serviceWorker";
 
 const initialState = {
-  user: {},
+  users: [{ email: "andressaa.dev@gmail.com", password: "andressaa94" }],
+  loggedInUser: {},
   posts: [
     {
       id: 1,

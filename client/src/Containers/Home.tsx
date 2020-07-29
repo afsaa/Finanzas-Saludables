@@ -14,7 +14,7 @@ function Home({ posts }: { posts?: any }) {
 
 const mapStateToProps = (state: any) => {
   return {
-    user: state.user,
+    users: state.users,
     posts: state.posts,
   };
 };
