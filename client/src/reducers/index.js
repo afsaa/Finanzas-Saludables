@@ -1,4 +1,8 @@
-import { ADD_POST, LOGIN_REQUEST } from "../actions/actionTypes";
+import {
+  ADD_POST,
+  LOGIN_REQUEST,
+  REGISTER_REQUEST,
+} from "../actions/actionTypes";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -19,6 +23,13 @@ const reducer = (state, action) => {
               user.password === action.payload.password
           ),
         },
+      };
+    }
+
+    case REGISTER_REQUEST: {
+      return {
+        ...state,
+        users: [...state.users, action.payload],
       };
     }
 

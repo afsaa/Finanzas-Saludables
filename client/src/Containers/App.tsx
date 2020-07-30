@@ -4,7 +4,7 @@ import Home from "../Containers/Home";
 import Layout from "../Containers/Layout";
 import PageNotFound from "./PageNotFound";
 import Login from "../Containers/Login";
-import { Register } from "../Containers/Register";
+import Register from "../Containers/Register";
 import "../assets/styles/App.scss";
 import AddPost from "./AddPost";
 
