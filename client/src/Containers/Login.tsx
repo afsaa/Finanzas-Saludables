@@ -1,19 +1,53 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { connect } from "react-redux";
+import { Link, useHistory } from "react-router-dom";
+import { loginRequest } from "../actions";
 import "../assets/styles/Login.scss";
 
 import googleIcon from "../assets/images/google-icon.png";
 import twitterIcon from "../assets/images/twitter-icon.png";
 
-export const Login = () => {
+const Login = (props: any) => {
+  const { loginRequest } = props;
+  const history = useHistory();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  type User = {
+    email: string;
+    password: string;
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    const user: User = { email, password };
+    loginRequest(user);
+    setEmail("");
+    setPassword("");
+    history.push("/");
+  };
+
   return (
     <section className="login">
       <div className="login__container">
         <h2>Inicio de Sesión</h2>
-        <form className="login__container--form">
-          <input className="input" type="email" placeholder="Correo" />
-          <input className="input" type="password" placeholder="Contraseña" />
-          <button type="button" className="button">
+        <form
+          className="login__container--form"
+          onSubmit={(e) => handleSubmit(e)}
+        >
+          <input
+            className="input"
+            type="email"
+            placeholder="Correo"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            className="input"
+            type="password"
+            placeholder="Contraseña"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit" className="button">
             Iniciar sesión
           </button>
           <div className="login__container--remember-me">
@@ -47,3 +81,9 @@ export const Login = () => {
     </section>
   );
 };
+
+const mapDispatchToProps = {
+  loginRequest,
+};
+
+export default connect(null, mapDispatchToProps)(Login);

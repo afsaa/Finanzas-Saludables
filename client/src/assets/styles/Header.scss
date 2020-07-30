@@ -34,13 +34,14 @@
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
-    margin: 2px 0px;
+    margin: 5px 0px;
   }
   a:hover {
     text-decoration: underline;
   }
   &--profile {
     @include flex(center, none, none);
+    margin-bottom: 15px;
   }
   &--profile img {
     width: 50px;
