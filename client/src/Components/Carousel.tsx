@@ -6,7 +6,7 @@ import playIcon from "../assets/images/play-icon.png";
 export const Carousel = ({ posts }: { posts: any }) => {
   return (
     <section className="carousel">
-      <h2 className="carousel__title">Pilares Fundamentales 🏛</h2>
+      <h2 className="carousel__title">Los Fundamentos 🏛</h2>
       <div className="carousel__container">
         {posts.map(
           ({

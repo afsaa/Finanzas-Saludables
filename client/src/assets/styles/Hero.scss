@@ -18,9 +18,10 @@
 }
 
 .hero__cta {
-  @include button(transparent, #ffffff, $primary-color, 20px, 50px);
+  @include button($secondary-color, #ffffff, $primary-color, 20px, 50px);
 }
 
 .hero__cta:hover {
-  background-color: $secondary-color;
+  color: #ffffff;
+  background-color: $primary-color;
 }

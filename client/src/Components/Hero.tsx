@@ -14,7 +14,7 @@ export const Hero = () => {
         <h2 className="hero__title">{hero_title_text}</h2>
         <p className="hero__description">{hero_description_text}</p>
         <button className="hero__cta" type="button">
-          {hero_cta_text.toUpperCase()}
+          {hero_cta_text}
         </button>
       </div>
     </div>
