@@ -83,8 +83,13 @@
   color: $main-text-color;
 }
 .button {
-  @include button(rgba(255, 255, 255, 0.2), $main-text-color, 20px, 50px);
-  outline: none;
+  @include button(
+    rgba(255, 255, 255, 0.2),
+    #ffffff,
+    $main-text-color,
+    20px,
+    50px
+  );
 }
 .button:hover {
   background-color: rgba(255, 255, 255, 0.5);

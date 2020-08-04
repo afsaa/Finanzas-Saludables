@@ -31,9 +31,15 @@
   letter-spacing: 1px;
 }
 
-@mixin button($background-color, $text-color, $text-size, $height) {
+@mixin button(
+  $background-color,
+  $border-color,
+  $text-color,
+  $text-size,
+  $height
+) {
   background-color: $background-color;
-  border: none;
+  border: solid 2px $border-color;
   border-radius: 25px;
   color: $text-color;
   cursor: pointer;
@@ -41,6 +47,7 @@
   font-size: $text-size;
   font-weight: bold;
   margin: 20px 0px;
+  outline: none;
   transition: 500ms background-color;
 }
 
