@@ -16,3 +16,12 @@
   width: 40%;
   margin-left: 10%;
 }
+
+.hero__cta {
+  @include button($secondary-color, #ffffff, $primary-color, 20px, 50px);
+}
+
+.hero__cta:hover {
+  color: #ffffff;
+  background-color: $primary-color;
+}
